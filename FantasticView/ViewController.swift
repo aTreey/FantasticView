@@ -8,14 +8,14 @@
 
 import UIKit
 
+@available(iOS 10, *)
 class ViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let fantasticView = FantasticView(frame: view.bounds)
-        view.addSubview(fantasticView)
+//        let fantasticView = FantasticView(frame: view.bounds)
+//        view.addSubview(fantasticView)
         
     }
 
