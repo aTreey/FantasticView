@@ -13,15 +13,17 @@ public class FantasticView: UIView {
     var colorCount = 0
     override init(frame: CGRect) {
         super.init(frame: frame)
-        let colorChange = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { (timer) in
-            UIView.animate(withDuration: 2.0, animations: {
-                self.layer.backgroundColor = self.colors[self.colorCount % 5].cgColor
-                self.colorCount += 1
-            })
+        
+        if #available(iOS 10.0, *) {
+            let colorChange = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { (timer) in
+                UIView.animate(withDuration: 2.0, animations: {
+                    self.layer.backgroundColor = self.colors[self.colorCount % 5].cgColor
+                    self.colorCount += 1
+                })
+            }
+            
+            colorChange.fire()
         }
-        
-        colorChange.fire()
-        
     }
     
     required public init?(coder aDecoder: NSCoder) {
