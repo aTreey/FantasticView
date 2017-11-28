@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FantasticView: UIView {
+public class FantasticView: UIView {
     let colors: [UIColor] = [.red, .orange, .yellow, .purple, .blue]
     var colorCount = 0
     override init(frame: CGRect) {
@@ -24,7 +24,7 @@ class FantasticView: UIView {
         
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
