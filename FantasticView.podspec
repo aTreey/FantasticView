@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = 'FantasticView'
-s.version          = '0.1.1'
+s.version          = '0.1.2'
 s.summary          = '测试'
 s.description      = <<-DESC
 对于这个lib的描述
